@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Terminal Noir - A dark, moody theme inspired by terminal interfaces */
+@plugin "daisyui/theme" {
+  name: "terminal-noir";
+  default: true;
+  color-scheme: dark;
+
+  --color-base-100: oklch(12% 0.02 260);
+  --color-base-200: oklch(10% 0.02 260);
+  --color-base-300: oklch(8% 0.02 260);
+  --color-base-content: oklch(85% 0.03 120);
+
+  --color-primary: oklch(75% 0.18 145);
+  --color-primary-content: oklch(10% 0.02 145);
+  --color-secondary: oklch(65% 0.15 280);
+  --color-secondary-content: oklch(95% 0.01 280);
+  --color-accent: oklch(80% 0.20 55);
+  --color-accent-content: oklch(15% 0.02 55);
+  --color-neutral: oklch(20% 0.01 260);
+  --color-neutral-content: oklch(80% 0.02 260);
+
+  --color-info: oklch(70% 0.15 220);
+  --color-info-content: oklch(98% 0.01 220);
+  --color-success: oklch(75% 0.18 145);
+  --color-success-content: oklch(10% 0.02 145);
+  --color-warning: oklch(85% 0.18 85);
+  --color-warning-content: oklch(15% 0.02 85);
+  --color-error: oklch(65% 0.22 25);
+  --color-error-content: oklch(98% 0.01 25);
+
+  --radius-selector: 0.25rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.3125rem;
+  --size-field: 0.3125rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 1;
+}
+
+@theme {
+  --font-sans: "Iosevka", ui-monospace, SFMono-Regular, monospace;
+  --font-mono: "Iosevka", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    letter-spacing: 0.025em;
+    line-height: 1.7;
+    font-size: 1.125rem;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+}
