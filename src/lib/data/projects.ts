@@ -57,5 +57,16 @@ export const projects: Project[] = [
 		technologies: ['Go', 'PostgreSQL', 'HTMX', 'Spotify API', 'Last.fm API'],
 		roleType: 'professional',
 		githubUrl: 'https://github.com/justEstif/go-spotify-era-organizer'
+	},
+	{
+		slug: 'qry',
+		title: 'qry',
+		tagline: 'Go · github.com/justEstif/qry',
+		description:
+			'Built an agent-first web search CLI in Go with a subprocess-based adapter architecture, concurrent multi-source fan-out with URL deduplication, and configurable fallback routing — designed as a stable, composable search primitive for AI agents and terminal workflows.',
+		technologies: ['Go', 'CLI', 'Concurrent Programming', 'URL Deduplication', 'Binary Architecture'],
+		roleType: 'professional',
+		githubUrl: 'https://github.com/justEstif/qry',
+		featured: true
 	}
 ];
