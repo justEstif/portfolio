@@ -80,7 +80,15 @@
 				<span class="text-success">●</span> Available for interesting projects.
 			</p>
 			<div class="flex flex-wrap gap-3">
-				<a href="{base}/projects" class="btn btn-primary btn-sm">view work</a>
+				<a
+					href="{base}/resume.pdf"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="btn btn-primary btn-sm"
+				>
+					resume ↓
+				</a>
+				<a href="{base}/projects" class="btn btn-outline btn-sm">view work</a>
 				<a href="{base}/contact" class="btn btn-outline btn-sm">get in touch</a>
 			</div>
 		</div>

@@ -213,16 +213,5 @@
 		</section>
 	{/if}
 
-	<!-- Download Resume -->
-	<section class="border-t border-base-content/10 pt-8">
-		<a
-			href="{base}/resume.pdf"
-			target="_blank"
-			rel="noopener noreferrer"
-			class="inline-flex items-center gap-2 px-4 py-2 border border-primary text-primary hover:bg-primary hover:text-primary-content transition-colors"
-		>
-			<span>Download Resume</span>
-			<span>↓</span>
-		</a>
-	</section>
+
 </div>
