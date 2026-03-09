@@ -30,7 +30,6 @@ export const projects: Project[] = [
       "Gemini API",
     ],
     githubUrl: "https://github.com/justEstif/go-climbing",
-    liveUrl: "http://go-climbing.estifanos.cc",
     featured: true,
   },
   {
@@ -52,6 +51,7 @@ export const projects: Project[] = [
       "A local-first task runtime in Go with a server-first API contract, pluggable sync and view adapter system, conflict-resolution policy with field-level LWW semantics, and a CLI + web client — designed to serve both human users and AI agents over a stable loopback HTTP interface.",
     technologies: ["Go", "JSONL", "HTTP"],
     githubUrl: "https://github.com/justEstif/todo-open",
+    liveUrl: "https://justestif.github.io/todo-open/",
     featured: true,
   },
   {
@@ -67,7 +67,8 @@ export const projects: Project[] = [
   {
     slug: "qry",
     title: "qry",
-    tagline: "Agent-first web search CLI with pluggable adapters and JSON output.",
+    tagline:
+      "Agent-first web search CLI with pluggable adapters and JSON output.",
     description:
       "Web search CLI in Go with a subprocess-based adapter architecture, concurrent multi-source fan-out, and configurable fallback routing — a composable search primitive for AI agents and terminal workflows.",
     technologies: [
