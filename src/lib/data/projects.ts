@@ -55,6 +55,26 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    slug: "specto",
+    title: "Specto",
+    tagline:
+      "Unified media consumption dashboard with LLM-powered tagging and analytics.",
+    description:
+      "Aggregates watch/listen/read history across Spotify, YouTube, Netflix, and more; normalizes heterogeneous platform data into a unified schema with LLM-powered automatic tagging and analytics.",
+    technologies: [
+      "Go",
+      "Chi",
+      "Templ",
+      "HTMX",
+      "PostgreSQL",
+      "sqlc",
+      "LLM Enrichment",
+    ],
+    githubUrl: "https://github.com/justEstif/specto",
+    liveUrl: "https://justestif.github.io/specto",
+    featured: true,
+  },
+  {
     slug: "spotify-era-organizer",
     title: "Spotify Era Organizer",
     tagline:
