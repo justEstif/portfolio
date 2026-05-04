@@ -16,7 +16,7 @@
   --color-primary-content: oklch(10% 0.02 145);
   --color-secondary: oklch(65% 0.15 280);
   --color-secondary-content: oklch(95% 0.01 280);
-  --color-accent: oklch(80% 0.20 55);
+  --color-accent: oklch(80% 0.2 55);
   --color-accent-content: oklch(15% 0.02 55);
   --color-neutral: oklch(20% 0.01 260);
   --color-neutral-content: oklch(80% 0.02 260);
@@ -52,7 +52,12 @@
     font-size: 1.125rem;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     letter-spacing: -0.01em;
     line-height: 1.3;
   }

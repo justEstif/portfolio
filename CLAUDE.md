@@ -2,30 +2,47 @@
 
 - **Language**: TypeScript
 - **Package Manager**: npm
-- **Add-ons**: sveltekit-adapter, mcp
+- **Stack**: SvelteKit 5, Tailwind CSS, DaisyUI
 
 ---
 
-You are able to use the Svelte MCP server, where you have access to comprehensive Svelte 5 and SvelteKit documentation. Here's how to use the available tools effectively:
+## Local gate
 
-## Available MCP Tools:
+Run before handing any work back:
 
-### 1. list-sections
+```bash
+npm run verify
+```
 
-Use this FIRST to discover all available documentation sections. Returns a structured list with titles, use_cases, and paths.
-When asked about Svelte or SvelteKit topics, ALWAYS use this tool at the start of the chat to find relevant sections.
+Runs in order: `prettier --check` → `oxlint --deny-warnings` → `svelte-check` → `vite build`. CI runs the same command. A passing local gate is required before pushing.
 
-### 2. get-documentation
+Auto-fix formatting:
 
-Retrieves full documentation content for specific sections. Accepts single or multiple sections.
-After calling the list-sections tool, you MUST analyze the returned documentation sections (especially the use_cases field) and then use the get-documentation tool to fetch ALL documentation sections that are relevant for the user's task.
+```bash
+npm run format   # prettier --write
+npm run lint     # oxlint (check only; oxlint --fix for auto-fixes)
+```
 
-### 3. svelte-autofixer
+---
 
-Analyzes Svelte code and returns issues and suggestions.
-You MUST use this tool whenever writing Svelte code before sending it to the user. Keep calling it until no issues or suggestions are returned.
+## Git safety
 
-### 4. playground-link
+- **Never** push directly to `main`, `master`, `prod`, `production`, or `release/*`. Open a pull request.
+- **Never** use `git push --force`, `git reset --hard`, `git clean -fdx`, branch deletion, or tag deletion without explicit user approval in the current conversation.
+- **Never** commit `.env` files, private keys, `.mcp.json`, or production credentials.
+- Pre-commit hook runs format check + lint. Pre-push hook runs the full gate and blocks protected branches and force pushes.
+- If git reports divergence or conflicts, stop and explain — do not rewrite history.
 
-Generates a Svelte Playground link with the provided code.
-After completing the code, ask the user if they want a playground link. Only call this tool after user confirmation and NEVER if code was written to files in their project.
+---
+
+## Svelte MCP tools
+
+You have access to comprehensive Svelte 5 and SvelteKit documentation via the Svelte MCP server.
+
+**list-sections** — Call first to discover documentation sections when asked about Svelte/SvelteKit topics.
+
+**get-documentation** — Fetches full docs for specific sections. Fetch ALL relevant sections before implementing.
+
+**svelte-autofixer** — Analyzes Svelte code for issues. Run before sending any Svelte code to the user; keep calling until no issues remain.
+
+**playground-link** — Generates a Svelte Playground link. Only after user confirmation; never if code was written to project files.
