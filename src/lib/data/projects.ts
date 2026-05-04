@@ -1,5 +1,3 @@
-export type RoleType = "professional" | "volunteer" | "contributor";
-
 export interface Project {
   slug: string;
   title: string;

@@ -1,0 +1,18 @@
+#!/bin/sh
+# Pre-commit: format check + lint. Fast — oxlint finishes in <100ms.
+set -e
+
+# Block conflict markers in staged files
+if git diff --cached --name-only | xargs grep -lE "^(<{7}|={7}|>{7})" 2>/dev/null; then
+  echo "ERROR: Conflict markers found. Resolve before committing." >&2
+  exit 1
+fi
+
+# Block staged .env files
+if git diff --cached --name-only | grep -qE "^\.env(\.|$)"; then
+  echo "ERROR: .env file staged. Remove it before committing." >&2
+  exit 1
+fi
+
+npm run format:check
+npm run lint
